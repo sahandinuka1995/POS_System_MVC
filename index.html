@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bootstrap POS System</title>
+	<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css" integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous"> -->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link href="font-awesome/css/all.css" rel="stylesheet">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-secondary mb-3">
+    <a class="navbar-brand" href="#">POS System</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarColor02">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item" id="btnDashboard">
+          <a class="nav-link" href="#">Dashboard</a>
+        </li>
+        <li class="nav-item" id="btnCustomer">
+          <a class="nav-link" href="#">Customers</a>
+        </li>
+        <li class="nav-item" id="btnItem">
+          <a class="nav-link" href="#">Items</a>
+        </li>
+        <li class="nav-item" id="btnOrder">
+          <a class="nav-link" href="#">Orders</a>
+        </li>
+      </ul>
+      <form class="form-inline">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+
+
+<div class="container-fluid">
+	<div class="row">   
+	<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" id="displayDashboard">
+      <h5>Dashboard</h5>
+
+      <div class="row">
+      	<div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 mt-3">
+      		<div class="card text-white bg-warning mb-3">
+			  <div class="row">
+			  	<div class="col-sm-2 ml-3 mt-4"><i class="fas fa-user-friends fa-2x"></i></div>
+			  	<div class="col-sm-8">
+			  		<div class="card-body">
+			    <h5 class="card-title">Customers</h5>
+			    <p class="card-text">1,294</p>
+			  </div>
+			  	</div>
+			  </div>
+			</div>
+      	</div>
+
+      	<div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 mt-3">
+      		<div class="card text-white bg-success mb-3">
+			  <div class="row">
+			  	<div class="col-sm-2 ml-3 mt-4"><i class="far fa-chart-bar fa-2x"></i></div>
+			  	<div class="col-sm-8">
+			  		<div class="card-body">
+			    <h5 class="card-title">Sales</h5>
+			    <p class="card-text">Rs. 1,345</p>
+			  </div>
+			  	</div>
+			  </div>
+			</div>
+      	</div>
+
+      	<div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 mt-3">
+      		<div class="card text-white bg-danger mb-3">
+			  <div class="row">
+			  	<div class="col-sm-2 ml-3 mt-4"><i class="fas fa-gopuram fa-2x"></i></div>
+			  	<div class="col-sm-8">
+			  		<div class="card-body">
+			    <h5 class="card-title">Stock</h5>
+			    <p class="card-text">1303</p>
+			  </div>
+			  	</div>
+			  </div>
+			</div>
+      	</div>
+
+      	<div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 mt-3">
+      		<div class="card text-white bg-primary mb-3">
+			  <div class="row">
+			  	<div class="col-sm-2 ml-3 mt-4"><i class="fas fa-bicycle fa-2x"></i></div>
+			  	<div class="col-sm-8">
+			  		<div class="card-body">
+			    <h5 class="card-title">Order</h5>
+			    <p class="card-text">576</p>
+			  </div>
+			  	</div>
+			  </div>
+			</div>
+      	</div>
+
+      </div>
+
+      <div class="row">
+      	<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+      		<div class="card">
+			  <div class="card-body" align="center">
+			    <h5 class="card-title">Users Statistics</h5>
+			    <h6 class="card-subtitle mb-2 text-muted">Users statistics this month</h6>
+			    <img src="assets/piechart.jpg" width="40%">
+			  </div>
+			</div>
+      	</div>
+      	<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+      		<div class="card">
+			  <div class="card-body" align="center">
+			    <h5 class="card-title">2020 Sales</h5>
+			    <h6 class="card-subtitle mb-2 text-muted">Number of products sold</h6>
+			    <img src="assets/linechart.jpg" width="100%">
+			  </div>
+			</div>
+      	</div>
+      </div>
+
+      <div class="row">
+      	<div class="col-sm-12 float-right mt-4">
+      		Made by <a href="http://facebook.com/sahandinukasd" target="_blank">Sahan Dinuka</a>
+      	</div>
+      </div>
+    </div>
+
+	<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" id="displayCustomer" style="display: none">
+		<div class="row">
+			<div class="col-12">
+			<h5 class="mb-4">Customer</h5>
+		</div>
+		</div>
+
+      <div class="row">
+      	<div class="col-12 col-sm-12 col-md-4 col-lg-4">
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <input id="cusid" type="text" class="form-control" placeholder="ID">
+          </div>
+          <div class="form-group">
+            <input id="cusname" type="text" class="form-control" placeholder="Name">
+          </div>
+          <div class="form-group">
+            <input id="cuspno" type="text" class="form-control" placeholder="Phone No">
+          </div>
+          <div class="form-group">
+            <textarea id="cusaddress" class="form-control" placeholder="Address"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button id="updatecus" type="button" class="btn btn-warning" data-dismiss="modal"><i class="far fa-window-close"></i> update</button>
+        <button id="addnewcus" type="button" class="btn btn-primary"><i class="fas fa-user-plus"></i> Add</button>
+      </div>
+      	</div>
+
+      	<div class="col-12 col-sm-12 col-md-8 col-lg-8 table-responsive-sm">
+			<table class="table">
+			  <thead>
+			    <tr class="bg-primary text-white">
+			      <th scope="col">ID</th>
+			      <th scope="col">Name</th>
+			      <th scope="col">Phone No</th>
+			      <th scope="col">Address</th>
+			    </tr>
+			  </thead>
+			  <tbody id="custbody">
+			  </tbody>
+			</table>
+      	</div>
+      </div>
+
+      <div class="modal fade" id="editCus" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  		<div class="modal-dialog">
+    		<div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel"><i class="far fa-edit"></i> Edit Customer</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="ID">
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Name">
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Phone No">
+          </div>
+          <div class="form-group">
+            <textarea class="form-control" placeholder="Address"></textarea>
+          </div>
+        </form>
+      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="far fa-window-close"></i> Cancel</button>
+		        <button type="button" class="btn btn-warning"><i class="far fa-edit"></i> Update</button>
+		      </div>
+		    	</div>
+		  	</div>
+		</div>
+
+		      <div class="modal fade" id="deleteCus" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		  <div class="modal-dialog">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <h5 class="modal-title" id="exampleModalLabel"><i class="far fa-trash-alt"></i> Delete Customer</h5>
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">&times;</span>
+		        </button>
+		      </div>
+		      <div class="modal-body" align="center">
+		        <h5>Are you sure to remove <b>CUS001</b> ?</h5>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="far fa-window-close"></i> Cancel</button>
+		        <button type="button" class="btn btn-danger"><i class="far fa-trash-alt"></i> Delete</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+
+      <div class="row">
+      	<div class="col-sm-12 float-right mt-4">
+      		Made by <a href="http://facebook.com/sahandinukasd" target="_blank">Sahan Dinuka</a>
+      	</div>
+      </div>
+    </div>
+
+	<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" id="displayItem" style="display: none">
+		<div class="row">
+			<div class="col-12">
+			<h5 class="mb-4">Item</h5>
+		</div>
+		</div>
+
+      <div class="row">
+      	<div class="col-12 col-sm-12 col-md-4 col-lg-4">
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <input id="itmcode" type="text" class="form-control" placeholder="Item Code">
+          </div>
+          <div class="form-group">
+            <input id="itmname" type="text" class="form-control" placeholder="Name">
+          </div>
+          <div class="form-group">
+            <input id="itmprice" type="text" class="form-control" placeholder="Price">
+          </div>
+          <div class="form-group">
+            <input id="itmqty" type="text" class="form-control" placeholder="Qty">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="far fa-window-close"></i> Cancel</button>
+        <button id="btnUpdateItm" type="button" class="btn btn-warning" data-dismiss="modal"><i class="far fa-window-close"></i> update</button>
+        <button id="btnAddItm" type="button" class="btn btn-primary"><i class="fas fa-user-plus"></i> Add</button>
+      </div>
+      	</div>
+
+      	<div class="col-12 col-sm-12 col-md-8 col-lg-8 table-responsive-sm">
+			<table class="table">
+			  <thead>
+			    <tr class="bg-success text-white">
+			      <th scope="col">Item Code</th>
+			      <th scope="col">Name</th>
+			      <th scope="col">Price</th>
+			      <th scope="col">Qty</th>
+			    </tr>
+			  </thead>
+			  <tbody id="tblItem">
+			  </tbody>
+			</table>
+      	</div>
+      </div>
+
+      <div class="row">
+      	<div class="col-sm-12 float-right mt-4">
+      		Made by <a href="http://facebook.com/sahandinukasd" target="_blank">Sahan Dinuka</a>
+      	</div>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" id="displayOrder" style="display: none;">
+      <div class="row">
+      	<div class="col-8 col-md-9 col-lg-9">
+      	<h5 class="mb-4">Orders</h5>
+      </div>
+      </div>
+
+      <div class="row ml-4 mr-4 table-responsive-sm">
+      	<div class="col-4">
+      		<div class="card-header bg-success">
+      			Invoice Details
+			</div>
+
+			<div class="row mt-2">
+				<div class="col-6 form-group">
+					<input id="orderid" type="text" name="" class="validate form-control" placeholder="Order ID">
+				</div>
+				<div class="col-6 form-group">
+					<input id="orderdate" type="date" name="" class="validate form-control">
+				</div>
+			</div>
+
+			<div class="row mt-2">
+				<div class="col-6 form-group">
+					<select	id="ordercus" class="form-control">
+					</select>
+					<label id="lblocus" style="color: red; display: none;">Select any Customer</label>
+				</div>
+				<div class="col-6 form-group">
+					<input id="ordercusid" type="text" name="" class="validate form-control" placeholder="Customer ID">
+				</div>
+			</div>
+
+			<div class="row mt-2">
+				<div class="col-6 form-group">
+					<input id="ordercusname" type="text" name="" class="validate form-control" placeholder="Name">
+				</div>
+				<div class="col-6 form-group">
+					<input id="ordercuspno" type="text" name="" class="validate form-control" placeholder="Tel No">
+				</div>
+			</div>
+
+			<div class="row mt-2">
+				<div class="col-12 form-group">
+					<textarea id="ordercusaddress" class="form-control" placehvalidate older="Address"></textarea>
+				</div>
+			</div>
+      	</div>
+
+      	<div class="col-5">
+      		<div class="card-header bg-success">
+      			Item Details
+			</div>
+
+			<div class="row mt-2">
+				<div class="col-6 form-group">
+					<select	id="orderitm" class="form-control">
+					</select>
+				</div>
+				<div class="col-6 form-group">
+					<input id="orderitmcode" type="text" name="" class="validate form-control" placeholder="Item Code">
+				</div>
+			</div>
+
+			<div class="row mt-2">
+				<div class="col-6 form-group">
+					<input id="orderitmname" type="text" name="" class="validate form-control" placeholder="Item Name">
+				</div>
+				<div class="col-6 form-group">
+					<input id="orderitmprice" type="text" name="" class="validate form-control" placeholder="Price">
+				</div>
+			</div>
+
+			<div class="row mt-2">
+				<div class="col-6 form-group">
+					<input id="orderqtyonhand" type="text" name="" class="validate form-control" placeholder="QtyOnHand">
+				</div>
+				<div class="col-6 form-group">
+					<input id="orderqty" type="text" name="" class="validate form-control" placeholder="OrderQty">
+					<label id="oqty" style="color: red; display: none;">Input available Qty</label>
+				</div>
+			</div>
+
+			<div class="row mt-2 mr-1 justify-content-end">
+				<button	id="btnAddToCart" type="button" class="btn btn-danger align-self-end">Add to Cart</button>
+			</div>
+      	</div>
+
+      	<div class="col-3">
+      		<div class="col-12">
+      			<label class="text-info">Total</label>
+      		</div>
+      		<div class="col-12">
+      			<label id="lblTotal" class="text-info" style="font-size: 30px;">0.00</label>
+      			<label>Rs/=</label>
+      		</div>
+      		<div class="col-12">
+      			<label class="text-danger">Sub Total</label>
+      		</div>
+      		<div class="col-12">
+      			<label class="text-danger" style="font-size: 30px;" id="lblSubTot">0.00</label>
+      			<label>Rs/=</label>
+      		</div>
+
+      		<div class="col-12">
+      			<label style="font-weight: bold;">Discount </label>
+      			<input id="txtDiscount" type="text" name="" class="validate form-control">
+      		</div>
+      		<div class="col-12">
+      			<label style="font-weight: bold;">Cash </label>
+      			<input id="txtCash" type="text" name="" class="validate form-control">
+      		</div>
+
+      		<div class="col-12">
+      			<label style="font-weight: bold;">Balance </label>
+      			<label id="lblbal">0.00</label>
+      		</div>
+      		<div class="col-12">
+      			<button id="purchase" type="button" class="btn btn-success">Purchase</button>
+      		</div>
+      	</div>
+
+        <div class="col-12">
+            	<table class="table">
+    		  <thead>
+	    		    <tr class="bg-warning text-white">
+	    		      <th scope="col">ID</th>
+	    		      <th scope="col">Item Code</th>
+	    		      <th scope="col">Cus ID</th>
+	    		      <th scope="col">Qty</th>
+	    		      <th scope="col">Price</th>
+	    		    </tr>
+	    		  </thead>
+	    		  <tbody id="tblOrder">
+	    		  </tbody>
+    			</table>
+        </div>
+      </div>
+
+      <div class="modal fade" id="editOdr" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel"><i class="fas fa-truck"></i> Edit Order</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="ID" value="OD001">
+              </div>
+              <div class="form-group">
+                <select class="form-control">
+                  <option>ITM001</option>
+                  <option>ITM002</option>
+                  <option>ITM003</option>
+                  <option>ITM004</option>
+                  <option>ITM005</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <select class="form-control">
+                  <option>CUS001</option>
+                  <option>CUS002</option>
+                  <option>CUS003</option>
+                  <option>CUS004</option>
+                  <option>CUS005</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <input type="number" class="form-control" placeholder="Qty" value="13">
+              </div>
+              <div class="form-group">
+                <input type="number" class="form-control" placeholder="Price" value="1250.00">
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="far fa-window-close"></i> Cancel</button>
+            <button type="button" class="btn btn-warning"><i class="far fa-edit"></i> Update</button>
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <div class="modal fade" id="deleteOdr" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel"><i class="far fa-trash-alt"></i> Delete Order</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body" align="center">
+            <h5>Are you sure to remove <b>OD001</b> ?</h5>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="far fa-window-close"></i> Cancel</button>
+            <button type="button" class="btn btn-danger"><i class="far fa-trash-alt"></i> Delete</button>
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <div class="row">
+      	<div class="col-sm-12 float-right mt-4">
+      		Made by <a href="http://facebook.com/sahandinukasd" target="_blank">Sahan Dinuka</a>
+      	</div>
+      </div>
+    </div>
+
+  	</div>
+</div>
+
+
+
+<script src="js/jquery-3.5.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/js/bootstrap.min.js" integrity="sha384-XEerZL0cuoUbHE4nZReLT7nx9gQrQreJekYhJD9WNWhH8nEW+0c5qq7aIo2Wl30J" crossorigin="anonymous"></script> -->
+
+<!-- Models -->
+<script src="assets/model/Customer.js"></script>
+<script src="assets/model/Order.js"></script>
+<script src="assets/model/Item.js"></script>
+
+<!-- DB Arrays -->
+<script src="assets/db/CustomerArray.js"></script>
+<script src="assets/db/OrderArray.js"></script>
+<script src="assets/db/ItemArray.js"></script>
+
+<!-- Controllers -->
+<script src="assets/controller/NavigationController.js"></script>
+<script src="assets/controller/CustomerController.js"></script>
+<script src="assets/controller/ItemController.js"></script>
+<script src="assets/controller/OrderController.js"></script>
+</body>
+</html>
